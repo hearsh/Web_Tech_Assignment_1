@@ -22,7 +22,10 @@ class App extends Component {
       name: null,
     }
   }
-
+  /* 
+  This function gets the initial data from the star wars api and updates the state
+  with the same.
+  */
   getInitialData = () => {
     fetch('https://swapi.co/api/', {
       method: 'GET',
@@ -40,6 +43,10 @@ class App extends Component {
     }).catch((error) => console.log(error) );
   }
 
+  /*
+  This function is used to get the data based on users
+  inputs, it updates the state with the new data
+  */
   getSection = (link, name) => {
     fetch(link, {
       method: 'GET',
